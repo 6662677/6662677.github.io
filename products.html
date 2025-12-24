@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Store Products</title>
+    <style>
+/* Header & Navigation */
+header {
+    background: #1a56db;
+    padding: 1.2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.5px;
+}
+
+.logo::before {
+    content: "💻";
+    font-size: 30px;
+}
+
+nav a {
+    color: white;
+    margin-left: 1.8rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e3f2fd;
+}
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .product-title {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        .tag {
+            background: #e0e0e0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background: #1d3557;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background: #457b9d;
+        }
+    </style>
+</head>
+<body>
+
+   <header>
+        <div class="logo">IT Digital Store</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <!-- Corrected navigation order and href links -->
+            <a href="support.html">Support</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <h1>Digital Store Products</h1>
+    <div class="product-grid">
+        <!-- 1. 1TB  Portable SSD -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lQDPJx23xYwGeh_NAfTNAfSwO2ZLEk_k2AMJE8FlHTCNAA_500_500.jpg" alt="1TB Portable SSD">
+            <h3 class="product-title">1TB Portable SSD</h3>
+            <p class="product-desc">High-speed portable storage with durable metal casing and fast data transfer.</p>
+            <div class="product-tags">
+                <span class="tag">High Speed</span>
+                <span class="tag">Portable</span>
+                <span class="tag">Durable</span>
+            </div>
+            <p class="product-price">$129</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 2. 27-inch 4K Monitor -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lR3PJx8-2o-e-__NAfTNAi2wUKqbSTY3HU4JE8HJw-pWAA_557_500.webp" alt="27-inch 4K Monitor">
+            <h3 class="product-title">27-inch 4K Monitor</h3>
+            <p class="product-desc">Ultra HD display with slim bezels and adjustable stand for optimal viewing.</p>
+            <div class="product-tags">
+                <span class="tag">4K Ultra HD</span>
+                <span class="tag">Slim Bezel</span>
+                <span class="tag">Wide Color</span>
+            </div>
+            <p class="product-price">$399</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 3. 1080p Webcam -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lQLPJwg5VBRHsR_MyMzIsJkUi_PVNX-NCRNnUXQT3wA_200_200.png" alt="1080p Webcam">
+            <h3 class="product-title">1080p Webcam</h3>
+            <p class="product-desc">Full HD webcam with built-in microphone and adjustable clip for clear video calls.</p>
+            <div class="product-tags">
+                <span class="tag">1080p HD</span>
+                <span class="tag">Auto Focus</span>
+                <span class="tag">Built-in Mic</span>
+            </div>
+            <p class="product-price">$49</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 4. Portable Bluetooth Speaker -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lR3PJxUwExhBij_NAfTNAu6wZ14SU1wtKpcJE8UU3CyRAA_750_500.webp" alt="Portable Bluetooth Speaker">
+            <h3 class="product-title">Portable Bluetooth Speaker</h3>
+            <p class="product-desc">Compact wireless speaker with 360-degree sound and long battery life.</p>
+            <div class="product-tags">
+                <span class="tag">Bluetooth 5.0</span>
+                <span class="tag">Water Resistant</span>
+                <span class="tag">Long Battery</span>
+            </div>
+            <p class="product-price">$79</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 5. Wireless Headphones -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lR3PJxab30kYHh_NAfTNAfSw08m74u3wgKMJE2dNxvqJAA_500_500.webp" alt="Wireless Headphones">
+            <h3 class="product-title">Wireless Headphones</h3>
+            <p class="product-desc">High performance noise canceling headphones with long battery life.</p>
+            <div class="product-tags">
+                <span class="tag">Portable</span>
+                <span class="tag">High Performance</span>
+                <span class="tag">Noise Canceling</span>
+                <span class="tag">Long Battery</span>
+            </div>
+            <p class="product-price">$799</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 6. Gaming Mouse -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lR3PJw1xYF76EB_MyMzIsG77Vl1I6BYfCRPFScSKvAA_200_200.webp" alt="Gaming Mouse">
+            <h3 class="product-title">Gaming Mouse</h3>
+            <p class="product-desc">RGB lighting high precision gaming mouse with ergonomic design.</p>
+            <div class="product-tags">
+                <span class="tag">RGB Lighting</span>
+                <span class="tag">High Precision</span>
+                <span class="tag">Gaming</span>
+            </div>
+            <p class="product-price">$59</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 7. Mechanical Keyboard -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lQDPJxH-cEA7CJ_MyMzIsNv612Lg1cilCRPFc0B_MQA_200_200.jpg" alt="Mechanical Keyboard">
+            <h3 class="product-title">Mechanical Keyboard</h3>
+            <p class="product-desc">Mechanical switches RGB backlit keyboard with full NPO.</p>
+            <div class="product-tags">
+                <span class="tag">Mechanical Switches</span>
+                <span class="tag">RGB Backlit</span>
+                <span class="tag">Full NPO</span>
+            </div>
+            <p class="product-price">$89</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 8. 2TB Portable SSD Pro -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lR3PJw0xthiGBl_MlszIsF55SuAmtXrMCRPFzOAKVgA_200_150.webp" alt="2TB Portable SSD Pro">
+            <h3 class="product-title">2TB Portable SSD Pro</h3>
+            <p class="product-desc">Blazing-fast 2TB portable SSD with rugged design and USB 3.2 Gen 2 support.</p>
+            <div class="product-tags">
+                <span class="tag">2TB Storage</span>
+                <span class="tag">USB 3.2 Gen 2</span>
+                <span class="tag">Rugged</span>
+            </div>
+            <p class="product-price">$229</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 9. True Wireless Earbuds -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lR3PJxwdlsAfcB_NAfTNAfSwRq3Zxk9Hui8JE8Yi0u0NAA_500_500.webp" alt="True Wireless Earbuds">
+            <h3 class="product-title">True Wireless Earbuds</h3>
+            <p class="product-desc">Low-latency wireless earbuds with active noise cancellation and 24-hour battery.</p>
+            <div class="product-tags">
+                <span class="tag">Active Noise Cancel</span>
+                <span class="tag">Low Latency</span>
+                <span class="tag">24H Battery</span>
+            </div>
+            <p class="product-price">$129</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- 10. Smart Thermostat -->
+        <div class="product-card">
+            <img class="product-image" src="C:\Users\10579\Desktop\lR3PKG6C9aRvuh_NAt7NAfSwwuM-pDCKb6MJE8ZfkjNJAA_500_734.webp" alt="Smart Thermostat">
+            <h3 class="product-title">Smart Thermostat</h3>
+            <p class="product-desc">Energy-saving smart thermostat with app control and voice assistant support.</p>
+            <div class="product-tags">
+                <span class="tag">Energy Saving</span>
+                <span class="tag">App Control</span>
+                <span class="tag">Voice Assistant</span>
+            </div>
+            <p class="product-price">$199</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>

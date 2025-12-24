@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechAus Digital - Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #1a56db;
+            padding: 1.2rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .logo::before {
+            content: "💻";
+            font-size: 30px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 1.8rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e3f2fd;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1a56db 100%);
+            color: white;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.8px;
+         }
+
+        .hero .company-tagline {
+            font-size: 1.3rem;
+            max-width: 700px;
+            line-height: 1.8;
+            opacity: 0.95;
+            margin-bottom: 3rem;
+        }
+
+        /* Company Info Section */
+        .company-info {
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            background-color: #f8fafc;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .info-card h2 {
+            color: #1a56db;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-left: 4px solid #1a56db;
+            padding-left: 1rem;
+        }
+
+        .info-card p, .info-card ul {
+            color: #334155;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .info-card ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 5%;
+            }
+
+            nav a {
+                margin: 0 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .company-info {
+                padding: 3rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation - Final Correct Order: Support first, then Products -->
+    <header>
+        <div class="logo">TechAus Digital</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <!-- ✅ Correct Order: Support → Products | Links are accurate -->
+            <a href="support.html">Support</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Australia's Leading ICT & Computer Product Retailer</h1>
+        <p class="company-tagline">TechAus Digital has been the market leader in Australia's ICT electronics and computer product sales for over a decade, delivering cutting-edge technology and unparalleled customer service to businesses and consumers nationwide.</p>
+    </section>
+
+    <!-- Company Core Info Section -->
+    <section class="company-info">
+        <div class="info-card">
+            <h2>Company Identity</h2>
+            <p><strong>Company Name:</strong> TechAus Digital Pty Ltd</p>
+            <p><strong>Head Office Address:</strong> 123 Tech Boulevard, Southbank, VIC 3006, Melbourne, Australia</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Unique Value Proposition</h2>
+            <p>We stand out in the Australian market with these key advantages:</p>
+            <ul>
+                <li>Exclusive partnerships with global ICT brands for early access to new products</li>
+                <li>Price match guarantee on all computer and electronics products</li>
+                <li>Custom-built tech solutions for small to enterprise-level businesses</li>
+                <li>Carbon-neutral supply chain for sustainable tech shopping</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h2>Customer Support Policy</h2>
+            <ul>
+                <li>24/7 Australian-based customer support via phone, email and live chat</li>
+                <li>30-day hassle-free returns and exchange policy for all products</li>
+                <li>Free technical support for 12 months on all purchased devices</li>
+                <li>On-site repair service available in major Australian cities within 48 hours</li>
+                <li>Extended warranty options up to 5 years for premium products</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

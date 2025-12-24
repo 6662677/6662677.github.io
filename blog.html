@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Digital Store - Blog</title>
+    <!-- Import Google Fonts - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Header Styling */
+        header { 
+            background: #2563eb; 
+            color: white; 
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        nav a { 
+            color: white; 
+            margin-right: 1.5rem; 
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.2s ease-in-out;
+            position: relative;
+        }
+        nav a:hover {
+            color: #e0e7ff;
+        }
+        /* Add hover underline effect */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #e0e7ff;
+            transition: width 0.2s ease-in-out;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Blog Section Styling */
+        .blog-section { 
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem ;
+        }
+
+        .blog-section h2 {
+            color: #1e40af;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .blog-post { 
+            margin: 2rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        /* Blog post hover lift effect */
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .blog-image {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: opacity 0.3s ease-in-out;
+        }
+        .blog-post:hover .blog-image {
+            opacity: 0.9;
+        }
+
+        .b log-content h3 {
+            color: #1e40af;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .blog-content p {
+            color: #4b5563;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .read-more:hover {
+            color: #1d4ed8;
+        }
+        .read-more:hover::after {
+            content: '';
+            animation: arrowMove 0.5s infinite alternate;
+        }
+        @keyframes arrowMove {
+            from { transform: translateX(0); }
+            to { transform: translateX(5px); }
+        }
+
+        /* Event Section */
+        .event-banner {
+            background: #f1f5f9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            text-align: center;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .event-banner:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .event-banner h3 {
+            color: #1e40af;
+            font-size: 1.8rem;
+            margin-bottom: 1            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .event-link {
+            background: #2563eb;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .event-link:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .event-link:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive Design - Mobile Friendly */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            .logo {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+            nav a {
+                margin-right: 0;
+                font-size: 1rem;
+            }
+            .blog-section {
+                padding: 1rem;
+                margin: 2rem auto;
+            }
+            .blog-section h2 {
+                font-size: 1.6rem;
+            }
+            .blog-post {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .blog-image {
+                width: 100%;
+                height: 220px;
+            }
+            .blog-content h3 {
+                font-size: 1.3rem;
+            }
+            .blog-content p {
+                font-size: 1rem;
+            }
+            .event-banner {
+                padding: 1.5rem 1rem;
+            }
+            .event-banner h3 {
+                font-size: 1.5rem;
+            }
+            .event-link {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">IT Digital Store</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <!-- Swapped Support and Products positions -->
+            <a href="support.html">Support</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <section class="blog-section">
+        <h2>Industry News & Insights</h2>
+
+        <!-- Blog Post 1 -->
+        <div class="blog-post">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=200&fit=crop" alt="2025 IT Product Trends" class="blog-image">
+            <div class="blog-content">
+                <h3>2025 IT Product Trends</h3>
+                <p>Thinner laptops, AI-powered headphones, and foldable displays will dominate the market this year. Learn which tech investments will deliver the best value for businesses and consumers.</p>
+                <a href="trends-2025.html" class="read-more">Read Full Article →</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-post">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=300&h=200&fit=crop" alt="Business Laptop Guide" class="blog-image">
+            <div class="blog-content">
+                <h3>How to Choose a Business Laptop</h3>
+                <p>Key factors: battery life, processing power, durability, and security features. We break down the top models for remote work, field teams, and office professionals.</p>
+                <a href="business-laptop-guide.html" class="read-more">Read Full Article →</a>
+            </div>
+        </div>
+
+        <!-- New Blog Post 3 -->
+        <div class="blog-post">
+            <img src="C:\Users\10579\Desktop\lR3PJxkHPQn-4ufNAfTNAu6wwnUcb8Lg_VUJFOMc7aoHAA_750_500.webp" alt="Sustainable Tech Initiative" class="blog-image">
+            <div class="blog-content">
+                <h3>IT Digital Store Launches Sustainable Tech Initiative</h3>
+                <p>Our store now offers trade-in programs for old devices, eco-friendly packaging for all orders, and a line of energy-efficient gadgets. Join us in reducing electronic waste and building a greener tech future.</p>
+                <a href="sustainable-tech-initiative.html" class="read-more">Read Full Article →</a>
+            </div>
+        </div>
+
+        <!-- Event Banner -->
+        <div class="event-banner">
+            <h3>Join Our 2025 Tech Showcase</h3>
+            <p>Test new products, meet industry experts, and get exclusive discounts — register now!</p>
+            <a href="tech-showcase-2025.html" class="event-link">Register for Event</a>
+        </div>
+    </section>
+</body>
+</html>
